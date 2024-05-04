@@ -1,4 +1,4 @@
-bzip2==1.0.8
+bzip2
 ca-certificates==2024.3.11
 click==8.1.7
 colorama==0.4.6
