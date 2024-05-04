@@ -1,0 +1,27 @@
+# Este arquivo pode ser usado para criar um ambiente usando:
+# $ conda create --name <env> --file <this file>
+# plataforma: win-64
+bzip2
+ca-certificates
+click
+colorama
+expat
+flask
+itsdangerous
+jinja2
+libffi
+markupsafe
+openssl
+pip
+pyodbc
+python
+setuptools
+sqlite
+tk
+tzdata
+vc
+vs2015_runtime
+werkzeug
+wheel
+xz
+zlib
