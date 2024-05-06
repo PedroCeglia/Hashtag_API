@@ -1,5 +1,4 @@
 from flask import Flask, jsonify, request
-import pyodbc
 from sqldb import add_user, add_payment, url_connection
 import json
 
@@ -36,15 +35,10 @@ def webhook():
     value = data.get("valor","")
     plots = data.get("parcelas","")
 
-    connection = pyodbc.connect(url_connection)
-    cursor = connection.cursor()
-
     
-    user = add_user(nome, email, status, cursor)
-    payment = add_payment(user[0], status, payment_method, plots, value, cursor)
+    user = add_user(nome, email, status)
+    payment = add_payment(user[0], status, payment_method, plots, value)
 
-    cursor.commit()
-    cursor.close()
     if user[2] == status:
         if status == "aprovado":
             liberar_acesso()
