@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 from sqldb import add_user, add_payment
 import json
+import os
 
 app = Flask(__name__)
 
@@ -63,4 +64,4 @@ def get_webhook():
 
 
 if __name__ == '__main__':
-  app.run()
+  app.run(debug=True, port=os.getenv("PORT", default=5000))
