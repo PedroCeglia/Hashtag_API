@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from sqldb import add_user, add_payment, url_connection
+from sqldb import add_user, add_payment
 import json
 
 app = Flask(__name__)
